@@ -1,0 +1,21 @@
+Package: splattr
+Title: 'Htmlwidget' to display color palettes
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Ian J",
+           family = "Lyttle",
+           role = c("aut", "cre"),
+           email = "ian.lyttle@schneider-electric.com",
+           comment = c(ORCID = "0000-0001-9962-4849"))
+Description: Helps you display discrete and continuous palettes.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
+Imports: 
+    htmlwidgets
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

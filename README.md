@@ -9,6 +9,8 @@
 status](https://www.r-pkg.org/badges/version/splattr)](https://CRAN.R-project.org/package=splattr)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Travis build
+status](https://travis-ci.org/ijlyttle/splattr.svg?branch=master)](https://travis-ci.org/ijlyttle/splattr)
 <!-- badges: end -->
 
 The goal of splattr is to provide some HTML-based tools for viewing and

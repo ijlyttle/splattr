@@ -117,7 +117,7 @@
     <p>Useful for showing continuous palettes</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ramp</span>(<span class='no'>colors</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='no'>colors</span>), <span class='kw'>height</span> <span class='kw'>=</span> <span class='fl'>40</span>, <span class='kw'>elementId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>ramp</span>(<span class='no'>colors</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>512</span>, <span class='kw'>height</span> <span class='kw'>=</span> <span class='fl'>40</span>, <span class='kw'>elementId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -128,7 +128,7 @@
     </tr>
     <tr>
       <th>n</th>
-      <td><p><code>numeric</code> number of colors to show in the ramp.
+      <td><p><code>numeric</code> number of colors to interpolate into the ramp.
 Uses <code>d3.interpolateRgbBasis()</code> to interpolate.</p></td>
     </tr>
     <tr>

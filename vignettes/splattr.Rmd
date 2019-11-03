@@ -20,13 +20,33 @@ library("splattr")
 
 Some words.
 
-```{r, out.height="auto"}
-swatch(terrain.colors(10))
+```{r}
+colors <- colorspace::terrain_hcl(10)
+colors
+```
+
+
+```{r}
+swatch(colors)
 ```
 
 Some more words.
 
-
-```{r, out.height="auto"}
-swatch(terrain.colors(10), height = 50)
+```{r}
+swatch(colors, height = 50)
 ```
+
+Even more words.
+
+```{r}
+ramp(colors)
+```
+
+We can estimate the effect of a color-vision deficiency:
+
+```{r}
+ramp(colorspace::deutan(colors))
+```
+
+Some final words.
+

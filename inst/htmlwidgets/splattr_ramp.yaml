@@ -1,5 +1,5 @@
 dependencies:
-  - name: splattr-ramp
+  - name: splattr_ramp
     version: "0.0.1"
     src: htmlwidgets/lib/ramp
     script:

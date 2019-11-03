@@ -4,12 +4,12 @@
 \alias{ramp}
 \title{Create ramp widget}
 \usage{
-ramp(colors, n = length(colors), height = 40, elementId = NULL)
+ramp(colors, n = 512, height = 40, elementId = NULL)
 }
 \arguments{
 \item{colors}{\code{character} vector of CSS colors. Can be hex codes, etc.}
 
-\item{n}{\code{numeric} number of colors to show in the ramp.
+\item{n}{\code{numeric} number of colors to interpolate into the ramp.
 Uses \code{d3.interpolateRgbBasis()} to interpolate.}
 
 \item{height}{\code{numeric} height of widget (pixels).}

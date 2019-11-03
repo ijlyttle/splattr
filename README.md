@@ -14,7 +14,9 @@ status](https://travis-ci.org/ijlyttle/splattr.svg?branch=master)](https://travi
 <!-- badges: end -->
 
 The goal of splattr is to provide some HTML-based tools for viewing and
-evaluating color-palettes.
+evaluating color-palettes. It is strongly inspired by the approach that
+Mike Bostock takes to show d3 color-palettes in
+[Observable](https://observablehq.com/@d3/working-with-color).
 
 ## Installation
 
@@ -27,6 +29,22 @@ devtools::install_github("ijlyttle/splattr")
 ```
 
 ## Examples
+
+These examples are not run in the README because I am not able to get
+`swatch()` and `ramp()` to print outside of an HTML context.
+
+You can see them in action in ihe [get-started
+article](https://ijlyttle.github.io/splattr/articles/splattr.html).
+
+``` r
+library("splattr")
+
+colors <- colorspace::terrain_hcl(10)
+
+swatch(colors)
+
+ramp(colors)
+```
 
 ## Contributing
 

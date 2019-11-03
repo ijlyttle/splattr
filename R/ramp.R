@@ -3,7 +3,7 @@
 #' Useful for showing continuous palettes
 #'
 #' @param colors    `character` vector of CSS colors. Can be hex codes, etc.
-#' @param n         `numeric` number of colors to show in the ramp.
+#' @param n         `numeric` number of colors to interpolate into the ramp.
 #'   Uses `d3.interpolateRgbBasis()` to interpolate.
 #' @param height    `numeric` height of widget (pixels).
 #' @param elementId `character` ID for the enclosing element.
@@ -13,12 +13,12 @@
 #'   ramp(terrain.colors(100))
 #' @export
 #'
-ramp <- function(colors, n = length(colors), height = 40, elementId = NULL) {
+ramp <- function(colors, n = 512, height = 40, elementId = NULL) {
 
   x <- list(colors = colors, n = n, height = height)
 
   htmlwidgets::createWidget(
-    "ramp",
+    "splattr_ramp",
     x,
     sizingPolicy = htmlwidgets::sizingPolicy(
       defaultWidth = "100%",

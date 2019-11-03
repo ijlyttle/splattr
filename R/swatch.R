@@ -17,7 +17,7 @@ swatch <- function(colors, height = 40, dx = 10, elementId = NULL) {
   x <- list(colors = colors, height = height, dx = dx)
 
   htmlwidgets::createWidget(
-    "swatch",
+    "splattr_swatch",
     x,
     sizingPolicy = htmlwidgets::sizingPolicy(
       defaultWidth = "100%",

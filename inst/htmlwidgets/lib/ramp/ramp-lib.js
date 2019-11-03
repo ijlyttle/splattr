@@ -13,7 +13,7 @@ class Ramp {
     const canvas = document.createElement('CANVAS');
     canvas.style.margin = '0';
     canvas.style.width = 'calc(100%)';
-    canvas.style.height = 'auto';
+    canvas.style.height = '40px';
     canvas.style.imageRendering = 'pixelated';
 
     const ctx = canvas.getContext('2d');
@@ -75,8 +75,8 @@ class Ramp {
     const rect = this.canvas.getBoundingClientRect();
     // Give the canvas pixel dimensions of their CSS
     // size * the device pixel ratio.
-    this.canvas.width = rect.width * this.dpr;
-    this.canvas.height = rect.height * this.dpr;
+    this.canvas.width = this._n;
+    this.canvas.height = 1;
 
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
@@ -84,9 +84,7 @@ class Ramp {
 
     for (let i = 0; i < this._n; ++i) {
       this.ctx.fillStyle = palette(i / (this._n - 1));
-      this.ctx.fillRect(i, 0, 1, rect.height * this.dpr);
-      console.log(i);
-      console.log(palette(i / (this._n - 1)));
+      this.ctx.fillRect(i, 0, 1, 1);
     }
 
   }

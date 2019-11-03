@@ -14,7 +14,7 @@
 #'
 swatch <- function(colors, height = 40, dx = 10, elementId = NULL) {
 
-  x <- list(colors = colors, dx = dx)
+  x <- list(colors = colors, height = height, dx = dx)
 
   htmlwidgets::createWidget(
     "swatch",
@@ -22,10 +22,8 @@ swatch <- function(colors, height = 40, dx = 10, elementId = NULL) {
     sizingPolicy = htmlwidgets::sizingPolicy(
       defaultWidth = "100%",
       defaultHeight = "auto",
-      knitr.defaultWidth = "100%",
-      knitr.defaultHeight = "auto",
       padding = 0,
-      viewer.padding = 40
+      viewer.padding = 10
     ),
     package = "splattr",
     elementId = elementId

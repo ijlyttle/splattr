@@ -25,3 +25,8 @@ swatch(terrain.colors(10))
 ```
 
 Some more words.
+
+
+```{r, out.height="auto"}
+swatch(terrain.colors(10), height = 50)
+```

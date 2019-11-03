@@ -13,6 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
         swt.colors = x.colors;
         swt.dx = x.dx;
+        swt.height = x.height;
         swt.redraw();
       },
 

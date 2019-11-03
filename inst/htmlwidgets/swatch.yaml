@@ -1,6 +1,6 @@
 dependencies:
-  - name: splattr
+  - name: splattr-swatch
     version: "0.0.1"
-    src: htmlwidgets/lib/splattr
+    src: htmlwidgets/lib/swatch
     script:
       - swatch-lib.js

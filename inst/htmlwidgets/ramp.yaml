@@ -1,0 +1,6 @@
+dependencies:
+  - name: splattr-ramp
+    version: "0.0.1"
+    src: htmlwidgets/lib/ramp
+    script:
+      - ramp-lib.js

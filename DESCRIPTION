@@ -14,7 +14,8 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Imports: 
-    htmlwidgets
+    htmlwidgets,
+    r2d3
 Suggests: 
     knitr,
     rmarkdown

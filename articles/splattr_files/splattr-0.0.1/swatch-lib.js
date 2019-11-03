@@ -13,7 +13,7 @@ class Swatch {
     const canvas = document.createElement('CANVAS');
     canvas.style.margin = "0";
     canvas.style.width = "calc(100%)";
-    canvas.style.height = "40px";
+    canvas.style.height = "auto";
     canvas.style.imageRendering = "crisp-edges";
 
     const ctx = canvas.getContext('2d');
@@ -96,6 +96,7 @@ class Swatch {
       this.ctx.fillStyle = x.color;
       this.ctx.fillRect(...x.coords);
     });
+
   }
 
 }

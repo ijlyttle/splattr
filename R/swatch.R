@@ -14,7 +14,7 @@
 #'
 swatch <- function(colors, height = 40, dx = 10, elementId = NULL) {
 
-  x <- list(colors = unname(colors), height = height, dx = dx)
+  x <- list(colors = as_hex(colors), height = height, dx = dx)
 
   htmlwidgets::createWidget(
     "splattr_swatch",

@@ -15,7 +15,7 @@
 #'
 ramp <- function(colors, n = 512, height = 40, elementId = NULL) {
 
-  x <- list(colors = unname(colors), n = n, height = height)
+  x <- list(colors = as_hex(colors), n = n, height = height)
 
   htmlwidgets::createWidget(
     "splattr_ramp",

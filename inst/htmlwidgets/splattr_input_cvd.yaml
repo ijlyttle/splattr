@@ -1,0 +1,6 @@
+dependencies:
+  - name: splattr_input_cvd
+    version: "0.0.1"
+    src: htmlwidgets/lib/input-cvd
+    script:
+      - input-cvd-lib.js

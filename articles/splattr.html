@@ -6,19 +6,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>splattr • splattr</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="splattr">
-<meta property="og:description" content="">
-<meta name="twitter:card" content="summary">
+<meta property="og:description" content="splattr">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">splattr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9001</span>
       </span>
     </div>
 
@@ -52,7 +52,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/ijlyttle/splattr">
+  <a href="https://github.com/ijlyttle/splattr/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -67,10 +67,10 @@
 
       
 
-      </header><script src="splattr_files/htmlwidgets-1.5.1/htmlwidgets.js"></script><script src="splattr_files/splattr_swatch-0.0.1/swatch-lib.js"></script><script src="splattr_files/splattr_swatch-binding-0.0.0.9000/splattr_swatch.js"></script><script src="splattr_files/splattr_ramp-0.0.1/ramp-lib.js"></script><script src="splattr_files/splattr_ramp-binding-0.0.0.9000/splattr_ramp.js"></script><script src="splattr_files/d3v5-5.0.0/d3.min.js"></script><div class="row">
+      </header><script src="splattr_files/htmlwidgets-1.5.1/htmlwidgets.js"></script><script src="splattr_files/splattr_swatch-0.0.2/swatch-lib.js"></script><script src="splattr_files/splattr_swatch-binding-0.0.0.9001/splattr_swatch.js"></script><script src="splattr_files/splattr_ramp-0.0.1/ramp-lib.js"></script><script src="splattr_files/splattr_ramp-binding-0.0.0.9001/splattr_ramp.js"></script><script src="splattr_files/d3v5-5.0.0/d3.min.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>splattr</h1>
+      <h1 data-toc-skip>splattr</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/ijlyttle/splattr/blob/master/vignettes/splattr.Rmd"><code>vignettes/splattr.Rmd</code></a></small>
@@ -80,27 +80,27 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"splattr"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"splattr"</span>)</pre></body></html></div>
 <p>Some words.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">colors &lt;-<span class="st"> </span>colorspace<span class="op">::</span><span class="kw"><a href="http://colorspace.R-Forge.R-project.org//reference/rainbow_hcl.html">terrain_hcl</a></span>(<span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">colors</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;  [1] "#26A63A" "#68AC20" "#92B106" "#B4B61A" "#D3BA3D" "#EFBD60" "#FFC183"</span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;  [8] "#FFC6A7" "#FFCDC9" "#F1F1F1"</span></a></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/swatch.html">swatch</a></span>(colors)</a></code></pre></div>
-<div id="htmlwidget-ff629f14fbdbcd516d3c" style="width:700px;height:432.632880098888px;" class="splattr_swatch html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ff629f14fbdbcd516d3c">{"x":{"colors":["#26A63A","#68AC20","#92B106","#B4B61A","#D3BA3D","#EFBD60","#FFC183","#FFC6A7","#FFCDC9","#F1F1F1"],"height":40,"dx":10},"evals":[],"jsHooks":[]}</script><p>Some more words.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/swatch.html">swatch</a></span>(colors, <span class="dt">height =</span> <span class="dv">50</span>)</a></code></pre></div>
-<div id="htmlwidget-47f45b6c6b303932c797" style="width:700px;height:432.632880098888px;" class="splattr_swatch html-widget"></div>
-<script type="application/json" data-for="htmlwidget-47f45b6c6b303932c797">{"x":{"colors":["#26A63A","#68AC20","#92B106","#B4B61A","#D3BA3D","#EFBD60","#FFC183","#FFC6A7","#FFCDC9","#F1F1F1"],"height":50,"dx":10},"evals":[],"jsHooks":[]}</script><p>Even more words.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/ramp.html">ramp</a></span>(colors)</a></code></pre></div>
-<div id="htmlwidget-1a9603fa91a350105db1" style="width:700px;height:432.632880098888px;" class="splattr_ramp html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1a9603fa91a350105db1">{"x":{"colors":["#26A63A","#68AC20","#92B106","#B4B61A","#D3BA3D","#EFBD60","#FFC183","#FFC6A7","#FFCDC9","#F1F1F1"],"n":512,"height":40},"evals":[],"jsHooks":[]}</script><p>We can estimate the effect of a color-vision deficiency:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="../reference/ramp.html">ramp</a></span>(colorspace<span class="op">::</span><span class="kw"><a href="http://colorspace.R-Forge.R-project.org//reference/simulate_cvd.html">deutan</a></span>(colors))</a></code></pre></div>
-<div id="htmlwidget-38b8a34eb3affd693040" style="width:700px;height:432.632880098888px;" class="splattr_ramp html-widget"></div>
-<script type="application/json" data-for="htmlwidget-38b8a34eb3affd693040">{"x":{"colors":["#8F7D3E","#B29225","#CCA00B","#D8AE1E","#DFBB40","#E4C662","#E5CF84","#E2D4A7","#E0DAC8","#F1F0F1"],"n":512,"height":40},"evals":[],"jsHooks":[]}</script><p>Some final words.</p>
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="no">colors</span> <span class="kw">&lt;-</span> <span class="kw pkg">colorspace</span><span class="kw ns">::</span><span class="fu"><a href="http://colorspace.R-Forge.R-project.org//reference/rainbow_hcl.html">terrain_hcl</a></span>(<span class="fl">10</span>)
+<span class="no">colors</span>
+<span class="co">#&gt;  [1] "#26A63A" "#68AC20" "#92B106" "#B4B61A" "#D3BA3D" "#EFBD60" "#FFC183"</span>
+<span class="co">#&gt;  [8] "#FFC6A7" "#FFCDC9" "#F1F1F1"</span></pre></body></html></div>
+<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/swatch.html">swatch</a></span>(<span class="no">colors</span>)</pre></body></html></div>
+<div id="htmlwidget-e94ba49872dc03218aa8" style="width:700px;height:432.632880098888px;" class="splattr_swatch html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e94ba49872dc03218aa8">{"x":{"colors":["#26A63A","#68AC20","#92B106","#B4B61A","#D3BA3D","#EFBD60","#FFC183","#FFC6A7","#FFCDC9","#F1F1F1"],"height":40,"dx":10,"margin":0,"background":null},"evals":[],"jsHooks":[]}</script><p>Some more words.</p>
+<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/swatch.html">swatch</a></span>(<span class="no">colors</span>, <span class="kw">height</span> <span class="kw">=</span> <span class="fl">50</span>)</pre></body></html></div>
+<div id="htmlwidget-434f785884b0bc30c474" style="width:700px;height:432.632880098888px;" class="splattr_swatch html-widget"></div>
+<script type="application/json" data-for="htmlwidget-434f785884b0bc30c474">{"x":{"colors":["#26A63A","#68AC20","#92B106","#B4B61A","#D3BA3D","#EFBD60","#FFC183","#FFC6A7","#FFCDC9","#F1F1F1"],"height":50,"dx":10,"margin":0,"background":null},"evals":[],"jsHooks":[]}</script><p>Even more words.</p>
+<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="../reference/ramp.html">ramp</a></span>(<span class="no">colors</span>)</pre></body></html></div>
+<div id="htmlwidget-4f3bfc008cafdc58e237" style="width:700px;height:432.632880098888px;" class="splattr_ramp html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4f3bfc008cafdc58e237">{"x":{"colors":["#26A63A","#68AC20","#92B106","#B4B61A","#D3BA3D","#EFBD60","#FFC183","#FFC6A7","#FFCDC9","#F1F1F1"],"n":512,"height":40},"evals":[],"jsHooks":[]}</script><p>We can estimate the effect of a color-vision deficiency:</p>
+<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="../reference/ramp.html">ramp</a></span>(<span class="kw pkg">colorspace</span><span class="kw ns">::</span><span class="fu"><a href="http://colorspace.R-Forge.R-project.org//reference/simulate_cvd.html">deutan</a></span>(<span class="no">colors</span>))</pre></body></html></div>
+<div id="htmlwidget-be07eb6c0457b00d4b70" style="width:700px;height:432.632880098888px;" class="splattr_ramp html-widget"></div>
+<script type="application/json" data-for="htmlwidget-be07eb6c0457b00d4b70">{"x":{"colors":["#8F7D3E","#B29225","#CCA00B","#D8AE1E","#DFBB40","#E4C662","#E5CF84","#E2D4A7","#E0DAC8","#F1F0F1"],"n":512,"height":40},"evals":[],"jsHooks":[]}</script><p>Some final words.</p>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
       </div>
 
@@ -113,7 +113,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

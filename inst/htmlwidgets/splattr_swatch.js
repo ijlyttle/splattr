@@ -10,7 +10,9 @@ HTMLWidgets.widget({
     var swt = new Swatch(el.id);
 
     // insist on the style of the parent
-    el.style = "width: 100%; height: auto;";
+    el.style.width = "100%";
+    el.style.height = "auto";
+    el.style.lineHeight = 0; // otherwise a few stray pixels appear at the bottom
 
     return {
       renderValue: function(x) {

@@ -82,7 +82,7 @@ class Swatch {
 
   set background(background) {
     this._background = background;
-    this.redraw();
+    this.parent.style.background = this._background;
   }
 
   get background() {

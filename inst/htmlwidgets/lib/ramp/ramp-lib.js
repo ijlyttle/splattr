@@ -74,7 +74,7 @@ class Ramp {
   set margin(margin) {
     this._margin = margin;
     this.canvas.style.margin = margin + "px";
-    this.canvas.style.width = `calc(100% - ${2 * margin}px`;
+    this.canvas.style.width = `calc(100% - ${2 * margin}px)`;
     this.redraw();
   }
 

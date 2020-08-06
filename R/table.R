@@ -1,19 +1,36 @@
-#' Create HCL data frame
+#' HCL data
 #'
-#' Needs colorspace package.
+#' These function help you consider colors in terms of their hue, chroma, and
+#' luminance (HCL). You will need the {[colorspace](http://hclwizard.org/r-colorspace/)}
+#' package to run these functions.
 #'
-#' @param colors `character` vector of R colors. Can be hex codes, etc.
+#' - `hcl_dataframe()`: get a data frame with HCL data
+#' - `hcl_table()`: get a formatted [gt table](https://gt.rstudio.com/index.html);
+#'   you will need the {gt} package.
 #'
-#' @return `data.frame` with columns: `color`, `hue`, `chroma` `luminance`.
+#' @param colors   `character` vector of R colors. Can be hex codes, etc.
+#' @param decimals `numeric`   number of decimal places for values in table.
+#'
+#' @return
+#' \describe{
+#'   \item{`hcl_dataframe()`}{`data.frame` with columns: `color`, `hue`, `chroma` `luminance`.}
+#'   \item{`hcl_table()`}{An object with S3 class `gt_tbl`.}
+#' }
+#'
 #' @examples
-#'   df_hcl("red")
-#'   df_hcl("#FF0000")
-#'   df_hcl(c("red", "green"))
+#'   # return data
+#'   hcl_dataframe("red")
+#'   hcl_dataframe("#FF0000")
+#'   hcl_dataframe(c("red", "green"))
+#'
+#'   # return formatted table
+#'   hcl_table(c("red", "green"))
+#'
 #' @export
 #'
-df_hcl <- function(colors) {
+hcl_dataframe <- function(colors) {
 
-  hcl <- list_hcl(colors)
+  hcl <- hcl_list(colors)
 
   data.frame(
     color = colors,
@@ -26,7 +43,7 @@ df_hcl <- function(colors) {
 }
 
 # given colors, return a list of HCL values.
-list_hcl <- function(colors) {
+hcl_list <- function(colors) {
 
   if (!requireNamespace("colorspace", quietly = TRUE)) {
     stop("This function needs the {colorspace} package, please install it.")
@@ -47,3 +64,31 @@ list_hcl <- function(colors) {
     luminance = access("L")
   )
 }
+
+#' @rdname hcl_dataframe
+#' @export
+#'
+hcl_table <- function(colors, decimals = 0) {
+
+  if (!requireNamespace("gt", quietly = TRUE)) {
+    stop("This function needs the {gt} package, please install it.")
+  }
+
+  hcl_dataframe(colors) %>%
+    gt::gt() %>%
+    gt::cols_align(
+      align = "right",
+      columns = gt::vars("color")
+    ) %>%
+    gt::data_color(
+      columns = gt::vars("color"),
+      colors = identity
+    ) %>%
+    gt::fmt_number(
+      columns = gt::vars("hue", "chroma", "luminance"),
+      decimals = decimals
+    )
+}
+
+
+

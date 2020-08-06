@@ -28,12 +28,14 @@ Imports:
     r2d3,
     assertthat,
     grDevices,
-    methods
+    methods,
+    magrittr
 Suggests: 
     knitr,
     rmarkdown,
     colorspace,
-    testthat (>= 2.1.0)
+    testthat (>= 2.1.0),
+    gt
 VignetteBuilder: knitr
 URL: https://github.com/ijlyttle/splattr
 BugReports: https://github.com/ijlyttle/splattr/issues

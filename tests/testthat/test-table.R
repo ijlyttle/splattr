@@ -8,23 +8,23 @@ list_red_green <-
     luminance = c(53.24, 87.74)
   )
 
-test_that("list_hcl works", {
+test_that("hcl_list works", {
   expect_equal(
-    list_hcl("red"),
+    hcl_list("red"),
     list_red,
     tolerance = 0.01
   )
 
   expect_equal(
-    list_hcl(red_green),
+    hcl_list(red_green),
     list_red_green,
     tolerance = 0.01
   )
 })
 
-test_that("df_hcl works", {
+test_that("hcl_dataframe works", {
 
-  df_red_green <- df_hcl(red_green)
+  df_red_green <- hcl_dataframe(red_green)
 
   expect_is(df_red_green, "data.frame")
 
@@ -55,4 +55,10 @@ test_that("df_hcl works", {
     list_red_green$luminance,
     tolerance = 0.01
   )
+})
+
+test_that("hcl_table works", {
+
+  expect_is(hcl_table(red_green), "gt_tbl")
+
 })

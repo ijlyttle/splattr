@@ -50,3 +50,6 @@ ramp(colorspace::deutan(colors))
 
 Some final words.
 
+```{r}
+hcl_table(colors)
+```

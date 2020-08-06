@@ -4,7 +4,14 @@
 \alias{ramp}
 \title{Create ramp widget}
 \usage{
-ramp(colors, n = 512, height = 40, elementId = NULL)
+ramp(
+  colors,
+  n = 512,
+  height = 40,
+  margin = 0,
+  background = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{colors}{\code{character} vector of CSS colors. Can be hex codes, etc.}
@@ -13,6 +20,10 @@ ramp(colors, n = 512, height = 40, elementId = NULL)
 Uses \code{d3.interpolateRgbBasis()} to interpolate.}
 
 \item{height}{\code{numeric} height of widget (pixels).}
+
+\item{margin}{\code{numeric} margin around the canvas (pixels).}
+
+\item{background}{\code{character} CSS color for the canvas background.}
 
 \item{elementId}{\code{character} ID for the enclosing element.}
 }

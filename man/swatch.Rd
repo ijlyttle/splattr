@@ -4,7 +4,14 @@
 \alias{swatch}
 \title{Create swatch widget}
 \usage{
-swatch(colors, height = 40, dx = 10, elementId = NULL)
+swatch(
+  colors,
+  height = 40,
+  dx = 10,
+  margin = 0,
+  background = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{colors}{\code{character} vector of CSS colors. Can be hex codes, etc.}
@@ -12,6 +19,10 @@ swatch(colors, height = 40, dx = 10, elementId = NULL)
 \item{height}{\code{numeric} height of widget (pixels).}
 
 \item{dx}{\code{numeric} spacing between color-swatches (pixels).}
+
+\item{margin}{\code{numeric} margin around the canvas (pixels).}
+
+\item{background}{\code{character} CSS color for the canvas background.}
 
 \item{elementId}{\code{character} ID for the enclosing element.}
 }

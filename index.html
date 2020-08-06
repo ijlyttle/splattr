@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">splattr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9002</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9003</span>
       </span>
     </div>
 
@@ -81,7 +81,7 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the delevopment version of codefolder from <a href="https://github.com/ijlyttle/splattr">GitHub</a> with:</p>
+<p>You can install the development version of splattr from <a href="https://github.com/ijlyttle/splattr">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="r"><span class="co"># install.packages("devtools")</span>
 <span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu">install_github</span>(<span class="st">"ijlyttle/splattr"</span>)</pre></div>
 </div>
@@ -89,10 +89,10 @@
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
 <p>These examples are not run in the README because I am not able to get <code><a href="reference/swatch.html">swatch()</a></code> and <code><a href="reference/ramp.html">ramp()</a></code> to print outside of an HTML context.</p>
-<p>You can see them in action in ihe <a href="https://ijlyttle.github.io/splattr/articles/splattr.html">get-started article</a>.</p>
+<p>You can see them in action in the <a href="https://ijlyttle.github.io/splattr/articles/splattr.html">get-started article</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"splattr"</span>)
 
-<span class="no">colors</span> <span class="kw">&lt;-</span> <span class="kw pkg">colorspace</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/colorspace/man/rainbow_hcl.html">terrain_hcl</a></span>(<span class="fl">10</span>)
+<span class="no">colors</span> <span class="kw">&lt;-</span> <span class="kw pkg">colorspace</span><span class="kw ns">::</span><span class="fu"><a href="http://colorspace.R-Forge.R-project.org//reference/rainbow_hcl.html">terrain_hcl</a></span>(<span class="fl">10</span>)
 
 <span class="fu"><a href="reference/swatch.html">swatch</a></span>(<span class="no">colors</span>)
 
@@ -142,7 +142,7 @@
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=splattr"><img src="https://www.r-pkg.org/badges/version/splattr" alt="CRAN status"></a></li>
 <li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
-<li><a href="https://travis-ci.org/ijlyttle/splattr"><img src="https://travis-ci.org/ijlyttle/splattr.svg?branch=master" alt="Travis build status"></a></li>
+<li><a href="https://github.com/ijlyttle/splattr/actions"><img src="https://github.com/ijlyttle/splattr/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 </ul>
 </div>
 </div>

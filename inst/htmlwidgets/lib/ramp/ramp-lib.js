@@ -31,6 +31,9 @@ class Ramp {
     this._colors = ['#FF0000', '#00FF00', '#0000FF'];
     this._n = 3;
     this._height = 40;
+    this._margin = 0;
+    this._background = null;
+
   }
 
   /* width, height `string` CSS width and height to resize the Swatch
@@ -68,6 +71,26 @@ class Ramp {
     this._n;
   }
 
+  set margin(margin) {
+    this._margin = margin;
+    this.canvas.style.margin = margin + "px";
+    this.canvas.style.width = `calc(100% - ${2 * margin}px`;
+    this.redraw();
+  }
+
+  get margin() {
+    this._margin;
+  }
+
+  set background(background) {
+    this._background = background;
+    this.parent.style.background = this._background;
+  }
+
+  get background() {
+    this.background;
+  }
+
   /* redraw the Swatch
    */
   redraw() {
@@ -79,6 +102,7 @@ class Ramp {
     this.canvas.height = 1;
 
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.ctx.beginPath();
 
     const palette = d3v5.interpolateRgbBasis(this._colors);
 

@@ -31,6 +31,8 @@ class Swatch {
     this._colors = ["#FF0000", "#00FF00", "#0000FF"];
     this._height = 40;
     this._dx = 10;
+    this._margin = 0;
+    this._background = null;
   }
 
   /* width, height `string` CSS width and height to resize the Swatch
@@ -68,6 +70,25 @@ class Swatch {
     this._dx;
   }
 
+  set margin(margin) {
+    this._margin = margin;
+    this.canvas.style.margin = margin + "px";
+    this.redraw();
+  }
+
+  get margin() {
+    this._margin;
+  }
+
+  set background(background) {
+    this._background = background;
+    this.redraw();
+  }
+
+  get background() {
+    this.background;
+  }
+
   /* redraw the Swatch
    */
   redraw() {
@@ -81,9 +102,12 @@ class Swatch {
     const n = this._colors.length;
 
     const scale =
-      Math.min(rect.width / (n * this._height + (n - 1) * this._dx), 1);
+      Math.min((rect.width - 2 * this._margin) / (n * this._height + (n - 1) * this._dx), 1);
 
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.ctx.beginPath();
+
+    // colors
     this._colors.map((x, index) => ({
       color: x,
       coords: [

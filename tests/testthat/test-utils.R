@@ -13,3 +13,7 @@ test_that("as_hex removes the alpha", {
 test_that("as_hex removes the names", {
   expect_identical(as_hex(c("name" = hex)), list(hex))
 })
+
+test_that("as_hex leaves non-hex alone", {
+  expect_identical(as_hex("red"), list("red"))
+})

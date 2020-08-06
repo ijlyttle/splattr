@@ -4,8 +4,12 @@
 \alias{input_cvd}
 \title{Create CVD widget}
 \usage{
-input_cvd(choice = c("none", "deutan", "protan", "tritan"),
-  severity = 0, label = "Color-Vision Deficiency", elementId = NULL)
+input_cvd(
+  choice = c("none", "deutan", "protan", "tritan"),
+  severity = 0,
+  label = "Color-Vision Deficiency",
+  elementId = NULL
+)
 }
 \arguments{
 \item{choice}{\code{character} initialization: indicates which form of CVD to simulate.}

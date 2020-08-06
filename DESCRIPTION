@@ -26,12 +26,16 @@ RoxygenNote: 7.1.1
 Imports: 
     htmlwidgets,
     r2d3,
-    assertthat
+    assertthat,
+    grDevices,
+    methods,
+    magrittr
 Suggests: 
     knitr,
     rmarkdown,
     colorspace,
-    testthat (>= 2.1.0)
+    testthat (>= 2.1.0),
+    gt
 VignetteBuilder: knitr
 URL: https://github.com/ijlyttle/splattr
 BugReports: https://github.com/ijlyttle/splattr/issues

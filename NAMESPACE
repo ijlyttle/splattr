@@ -3,7 +3,6 @@
 export("%>%")
 export(hcl_dataframe)
 export(hcl_table)
-export(input_cvd)
 export(ramp)
 export(swatch)
 importFrom(magrittr,"%>%")

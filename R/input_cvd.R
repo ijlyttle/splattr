@@ -11,7 +11,7 @@
 #' @return htmlwidget
 #' @examples
 #'   # input_cvd("cvd-control")
-#' @export
+#' @noRd
 #'
 input_cvd <- function(choice = c("none", "deutan", "protan", "tritan"),
                       severity = 0, label = "Color-Vision Deficiency",

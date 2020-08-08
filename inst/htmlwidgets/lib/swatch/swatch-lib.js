@@ -77,6 +77,7 @@ class Swatch {
   set margin(margin) {
     this._margin = margin;
     this.canvas.style.margin = margin + "px";
+    this.canvas.style.width = `calc(100% - 2 * ${margin}px)`;
     this.redraw();
   }
 
@@ -106,7 +107,7 @@ class Swatch {
     const rect = this.canvas.getBoundingClientRect();
     // Give the canvas pixel dimensions of their CSS
     // size * the device pixel ratio.
-    this.canvas.width = rect.width * this.dpr;
+    this.canvas.width = (rect.width - 2 * this._margin) * this.dpr;
     this.canvas.height = rect.height * this.dpr;
 
     const scale =

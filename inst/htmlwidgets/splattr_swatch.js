@@ -16,9 +16,6 @@ HTMLWidgets.widget({
 
     return {
       renderValue: function(x) {
-
-        el.style.background = x.background;
-
         swt.colors = x.colors;
         swt.dx = x.dx;
         swt.height = x.height;

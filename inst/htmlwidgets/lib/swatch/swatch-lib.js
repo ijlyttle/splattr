@@ -10,29 +10,33 @@ class Swatch {
     // take into account retina displays
     const dpr = window.devicePixelRatio || 1;
 
+    // canvas
     const canvas = document.createElement('CANVAS');
-    canvas.style.margin = "0";
     canvas.style.width = "calc(100%)";
-    canvas.style.height = "auto";
     canvas.style.imageRendering = "crisp-edges";
 
     const ctx = canvas.getContext('2d');
     ctx.scale(dpr, dpr);
 
-    /* determine parent-element, add canvas */
+    // enclosing div
+    const div = document.createElement('div');
+    div.appendChild(canvas);
+
+    /* determine parent-element, add div */
     const parent = document.getElementById(id);
-    parent.appendChild(canvas);
+    parent.appendChild(div);
 
     this.parent = parent;
+    this.div = div;
     this.canvas = canvas;
     this.ctx = ctx;
     this.dpr = dpr;
 
-    this._colors = ["#FF0000", "#00FF00", "#0000FF"];
-    this._height = 40;
-    this._dx = 10;
-    this._margin = 0;
-    this._background = null;
+    this.colors = ["#FF0000", "#00FF00", "#0000FF"];
+    this.height = 40;
+    this.dx = 10;
+    this.margin = 0;
+    this.background = null;
   }
 
   /* width, height `string` CSS width and height to resize the Swatch
@@ -82,7 +86,7 @@ class Swatch {
 
   set background(background) {
     this._background = background;
-    this.parent.style.background = this._background;
+    this.div.style.background = background;
   }
 
   get background() {
@@ -93,13 +97,16 @@ class Swatch {
    */
   redraw() {
 
+    const n = this._colors.length;
+
+    const widthMax = 2 * this._margin + n * this._height + (n - 1) * this._dx;
+    this.div.style.maxWidth = `${widthMax}px`;
+
     const rect = this.canvas.getBoundingClientRect();
     // Give the canvas pixel dimensions of their CSS
     // size * the device pixel ratio.
     this.canvas.width = rect.width * this.dpr;
     this.canvas.height = rect.height * this.dpr;
-
-    const n = this._colors.length;
 
     const scale =
       Math.min((rect.width - 2 * this._margin) / (n * this._height + (n - 1) * this._dx), 1);

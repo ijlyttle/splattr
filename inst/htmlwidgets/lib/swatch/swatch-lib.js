@@ -99,6 +99,7 @@ class Swatch {
 
     const n = this._colors.length;
 
+    // work out the maximum width for the enclosing div
     const widthMax = 2 * this._margin + n * this._height + (n - 1) * this._dx;
     this.div.style.maxWidth = `${widthMax}px`;
 

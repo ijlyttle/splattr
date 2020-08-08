@@ -27,7 +27,7 @@ colors
 
 
 ```{r}
-swatch(colors)
+swatch(colors, background = "#333", margin = 10)
 ```
 
 Some more words.

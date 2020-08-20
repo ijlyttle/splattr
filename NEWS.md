@@ -1,6 +1,6 @@
 # splattr 0.0.0 (development version)
 
-* A (#16)
+* Functions `hcl_dataframe()` and `hcl_table()` can take a named list or vector of `colors`. Tweaks table-formatting. (#16)
 
 * Added arguments `background` and `margin` to `ramp()` and `swatch()`, can help to simulate, for example, dark-mode. (#1, #2)
  

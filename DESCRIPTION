@@ -1,6 +1,6 @@
 Package: splattr
 Title: 'Htmlwidget' to display color palettes
-Version: 0.0.0.9004
+Version: 0.0.0.9005
 Authors@R:
     c(
       person(
@@ -29,7 +29,8 @@ Imports:
     assertthat,
     grDevices,
     methods,
-    magrittr
+    magrittr,
+    rlang
 Suggests: 
     knitr,
     rmarkdown,

@@ -7,16 +7,20 @@
 \usage{
 hcl_dataframe(colors)
 
-hcl_table(colors, decimals = 0)
+hcl_table(colors, title = NULL, decimals = 0)
 }
 \arguments{
-\item{colors}{\code{character} vector of R colors. Can be hex codes, etc.}
+\item{colors}{\code{character} vector of R colors. Can be hex codes, etc.
+Names can be meaningful.}
+
+\item{title}{\code{character} title for table.}
 
 \item{decimals}{\code{numeric}   number of decimal places for values in table.}
 }
 \value{
 \describe{
-\item{\code{hcl_dataframe()}}{\code{data.frame} with columns: \code{color}, \code{hue}, \code{chroma} \code{luminance}.}
+\item{\code{hcl_dataframe()}}{\code{data.frame} with columns:
+\code{name}, \code{color}, \code{hue}, \code{chroma} \code{luminance}.}
 \item{\code{hcl_table()}}{An object with S3 class \code{gt_tbl}.}
 }
 }

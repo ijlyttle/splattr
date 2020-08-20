@@ -18,4 +18,12 @@ as_hex <- function(x) {
   x
 }
 
-
+splattr_sizing_policy <- function(...) {
+  htmlwidgets::sizingPolicy(
+    defaultWidth = "100%",
+    defaultHeight = "auto",
+    padding = 0,
+    viewer.padding = 10,
+    ...
+  )
+}

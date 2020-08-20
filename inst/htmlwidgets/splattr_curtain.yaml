@@ -1,0 +1,7 @@
+dependencies:
+ - name: splattr_curtain
+   version: "0.0.1"
+   src: htmlwidgets/lib/curtain
+   script:
+     - curtain-lib.js
+

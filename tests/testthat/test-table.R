@@ -30,9 +30,22 @@ test_that("hcl_dataframe works", {
 
   expect_named(
     df_red_green,
-    c("color", "hue", "chroma", "luminance")
+    c("name", "color", "hue", "chroma", "luminance")
   )
 
+  expect_identical(
+    df_red_green$name,
+    c(NA_character_, NA_character_)
+  )
+
+  red_green_named <- red_green
+  names(red_green_named) <- red_green
+  df_red_green_named <- hcl_dataframe(red_green_named)
+
+  expect_identical(
+    df_red_green_named$name,
+    red_green
+  )
   expect_identical(
     df_red_green$color,
     red_green
@@ -55,6 +68,7 @@ test_that("hcl_dataframe works", {
     list_red_green$luminance,
     tolerance = 0.01
   )
+
 })
 
 test_that("hcl_table works", {

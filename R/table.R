@@ -93,9 +93,6 @@ hcl_table <- function(colors, title = NULL, decimals = 0) {
 
   df_colors %>%
     gt::gt() %>%
-    gt::cols_width(
-      gt::everything() ~ px(80)
-    ) %>%
     gt::cols_align(
       align = "right",
       columns = gt::vars("color")

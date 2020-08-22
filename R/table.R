@@ -9,11 +9,14 @@
 #'   you will need the {gt} package.
 #'
 #' @param colors   `character` vector of R colors. Can be hex codes, etc.
+#'                             Names can be meaningful.
+#' @param title    `character` title for table.
 #' @param decimals `numeric`   number of decimal places for values in table.
 #'
 #' @return
 #' \describe{
-#'   \item{`hcl_dataframe()`}{`data.frame` with columns: `color`, `hue`, `chroma` `luminance`.}
+#'   \item{`hcl_dataframe()`}{`data.frame` with columns:
+#'     `name`, `color`, `hue`, `chroma` `luminance`.}
 #'   \item{`hcl_table()`}{An object with S3 class `gt_tbl`.}
 #' }
 #'
@@ -32,8 +35,14 @@ hcl_dataframe <- function(colors) {
 
   hcl <- hcl_list(colors)
 
+  values <- unname(unlist(colors))
+  names <- names(colors)
+
+  names <- names %||% rep(NA_character_, length(colors))
+
   data.frame(
-    color = colors,
+    name = names,
+    color = values,
     hue = hcl$hue,
     chroma = hcl$chroma,
     luminance = hcl$luminance,
@@ -68,13 +77,21 @@ hcl_list <- function(colors) {
 #' @rdname hcl_dataframe
 #' @export
 #'
-hcl_table <- function(colors, decimals = 0) {
+hcl_table <- function(colors, title = NULL, decimals = 0) {
 
   if (!requireNamespace("gt", quietly = TRUE)) {
     stop("This function needs the {gt} package, please install it.")
   }
 
-  hcl_dataframe(colors) %>%
+  df_colors <- hcl_dataframe(colors)
+
+  # if names are empty, remove
+  has_no_names <- all(is.na(df_colors$name))
+  if (has_no_names) {
+    df_colors$name <- NULL
+  }
+
+  df_colors %>%
     gt::gt() %>%
     gt::cols_align(
       align = "right",
@@ -87,7 +104,10 @@ hcl_table <- function(colors, decimals = 0) {
     gt::fmt_number(
       columns = gt::vars("hue", "chroma", "luminance"),
       decimals = decimals
-    )
+    ) %>%
+    gt::tab_header(title = title) %>%
+    gt::opt_align_table_header(align = "left")
+
 }
 
 

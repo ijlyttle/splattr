@@ -1,3 +1,7 @@
+#' @importFrom rlang "%||%"
+#' @noRd
+NULL
+
 remove_alpha <- function(x) {
   # some hex-colors have an alpha channel, this removes that
   sub("^(#[A-Fa-f0-9]{6})[A-Fa-f0-9]{2}$", "\\1", x)

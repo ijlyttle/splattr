@@ -1,11 +1,11 @@
 list_red <- list(hue = 12.17, chroma = 179.04, luminance = 53.24)
 
-red_green <- c("red", "green")
+red_green <- c("red", "green", "#48216A")
 list_red_green <-
   list(
-    hue = c(12.17, 127.72),
-    chroma = c(179.04, 135.78),
-    luminance = c(53.24, 87.74)
+    hue = c(12.17, 127.72, 282.40),
+    chroma = c(179.04, 135.78, 45.05),
+    luminance = c(53.24, 87.74, 21.97)
   )
 
 test_that("hcl_list works", {
@@ -35,7 +35,7 @@ test_that("hcl_dataframe works", {
 
   expect_identical(
     df_red_green$name,
-    c(NA_character_, NA_character_)
+    c(NA_character_, NA_character_, NA_character_)
   )
 
   red_green_named <- red_green

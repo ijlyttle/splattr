@@ -34,6 +34,7 @@ HTMLWidgets.widget({
       resize: function(width, height) {
 
         ctn.resize(width, height);
+
         ctn.redraw();
       },
 

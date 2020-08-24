@@ -18,7 +18,7 @@
 #'                                    sine wave (non-dimensional):
 #'                                      use 0 for no dampening,
 #'                                      use 1 for linear dampening.
-#' @param n_color_interp  `numeric`   number interpolated colors on canvas.
+#' @param n_color_interp  `numeric`   number of colors interpolated on canvas.
 #' @param elementId       `character` ID for enclosing element.
 #'
 #' @return Object with S3 classes `splattr_curtain`, `htmlwidget`.

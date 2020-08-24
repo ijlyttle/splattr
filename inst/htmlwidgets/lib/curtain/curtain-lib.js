@@ -5,6 +5,26 @@ class Curtain {
    */
   constructor(id) {
 
+    // the only thing we can provide to the constructor is the id
+    //   everything else is set when rendered
+
+    // canvas
+    const dpr = window.devicePixelRatio || 1;
+
+    const canvas = document.createElement('CANVAS');
+    canvas.style.imageRendering = 'pixelated';
+
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+
+    // enclosing div
+    const div = document.createElement('div');
+    div.appendChild(canvas);
+
+    // determine parent-element, add div
+    const parent = document.getElementById(id);
+    parent.appendChild(div);
+
   }
 
   /* colors `string[]`, CSS colors
@@ -12,6 +32,8 @@ class Curtain {
    */
   set colors(colors) {
     this._colors = colors;
+    // set internal colors, will also depend on cvd
+    this.redraw();
   }
 
   get colors() {
@@ -23,6 +45,7 @@ class Curtain {
    */
   set width(width) {
     this._width = width;
+    this.canvas.style.width = `${width}px`;
     this.redraw();
   }
 
@@ -35,6 +58,7 @@ class Curtain {
    */
   set height(height) {
     this._height = height;
+    this.canvas.style.height = `${height}px`;
     this.redraw();
   }
 
@@ -47,6 +71,7 @@ class Curtain {
    */
   set margin(margin) {
     this._margin = margin;
+    this.canvas.style.margin = `${margin}px`;
     this.redraw();
   }
 
@@ -101,22 +126,29 @@ class Curtain {
     this._waveExponent;
   }
 
-  /* waveExponent `number`, exponent used for vertical dampening of the sine wave (pixels)
+  /* nColorInterp `number`, number of colors interpolated on canvas
    *
    */
   set nColorInterp(nColorInterp) {
     this._nColorInterp = nColorInterp;
-    this.redraw();
   }
 
   get nColorInterp() {
     this._nColorInterp;
   }
 
-  /* width, height `string` CSS width and height to resize the Swatch
+  get colorsInterp() {
+    this._colorsInterp;
+  }
+
+  /* width, height `string` CSS width and height to resize the curtain
    *
    */
   resize(width, height) {
+  }
+
+  recolor(colors, nColorInterp) {
+
   }
 
   redraw() {

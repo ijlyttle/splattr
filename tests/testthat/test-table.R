@@ -1,6 +1,6 @@
 list_red <- list(hue = 12.17, chroma = 179.04, luminance = 53.24)
 
-red_green <- c("red", "green")
+red_green <- c("#FF0000", "#00FF00")
 list_red_green <-
   list(
     hue = c(12.17, 127.72),
@@ -10,7 +10,7 @@ list_red_green <-
 
 test_that("hcl_list works", {
   expect_equal(
-    hcl_list("red"),
+    hcl_list("#FF0000"),
     list_red,
     tolerance = 0.01
   )

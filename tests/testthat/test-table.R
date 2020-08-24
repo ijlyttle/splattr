@@ -10,7 +10,7 @@ list_red_green <-
 
 test_that("hcl_list works", {
   expect_equal(
-    hcl_list("red"),
+    hcl_list("#FF0000"),
     list_red,
     tolerance = 0.01
   )
@@ -26,7 +26,7 @@ test_that("hcl_dataframe works", {
 
   df_red_green <- hcl_dataframe(red_green)
 
-  expect_is(df_red_green, "data.frame")
+  expect_s3_class(df_red_green, "data.frame")
 
   expect_named(
     df_red_green,

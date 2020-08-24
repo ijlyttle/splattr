@@ -6,7 +6,7 @@
 \usage{
 ramp(
   colors,
-  n = 512,
+  n_color_widget = 512,
   height = 40,
   margin = 0,
   background = NULL,
@@ -16,12 +16,11 @@ ramp(
 \arguments{
 \item{colors}{\code{character} vector of CSS colors. Can be hex codes, etc.}
 
-\item{n}{\code{numeric} number of colors to interpolate into the ramp.
-Uses \code{d3.interpolateRgbBasis()} to interpolate.}
+\item{n_color_widget}{\code{numeric} number of colors used in the widget.}
 
-\item{height}{\code{numeric} height of widget (pixels).}
+\item{height}{\code{numeric} height of canvas (pixels).}
 
-\item{margin}{\code{numeric} margin around the canvas (pixels).}
+\item{margin}{\code{numeric} margin around canvas (pixels).}
 
 \item{background}{\code{character} CSS color for the canvas background.}
 

@@ -6,7 +6,7 @@ HTMLWidgets.widget({
 
   factory: function(el, width, height) {
 
-    // create our sigma object and bind it to the element
+    // create our ramp object and bind it to the element
     var rmp = new Ramp(el.id);
 
     // insist on the style of the parent
@@ -24,6 +24,7 @@ HTMLWidgets.widget({
         rmp.height = x.height;
         rmp.margin = x.margin;
         rmp.background = x.background;
+
         rmp.redraw();
       },
 
@@ -33,7 +34,7 @@ HTMLWidgets.widget({
       },
 
       // return the object
-      r: rmp
+      rmp: rmp
     };
   }
 });

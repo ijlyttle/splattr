@@ -61,6 +61,7 @@ hcl_list <- function(colors) {
   rgb_num <- grDevices::col2rgb(colors)
   trgb_num <- t(rgb_num) / 255
   rgb <- colorspace::sRGB(trgb_num)
+
   hcl <- methods::as(rgb, "polarLUV")
 
   access <- function(x) {

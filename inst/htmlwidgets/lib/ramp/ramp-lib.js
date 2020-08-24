@@ -1,6 +1,6 @@
 class Ramp {
 
-  /* id `string` id of parent element in which to place the Swatch
+  /* id `string` id of parent element in which to place the Ramp
    *
    */
   constructor(id) {
@@ -74,7 +74,7 @@ class Ramp {
   set margin(margin) {
     this._margin = margin;
     this.canvas.style.margin = margin + "px";
-    this.canvas.style.width = `calc(100% - ${2 * margin}px)`;
+    this.canvas.style.width = `calc(100% - 2 * ${margin}px)`;
     this.redraw();
   }
 
@@ -91,8 +91,6 @@ class Ramp {
     this.background;
   }
 
-  /* redraw the Swatch
-   */
   redraw() {
 
     const rect = this.canvas.getBoundingClientRect();

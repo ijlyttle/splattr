@@ -53,3 +53,9 @@ Some final words.
 ```{r}
 hcl_table(colors)
 ```
+
+Even more-final words:
+
+```{r}
+curtain(colors, background = "#333")
+```

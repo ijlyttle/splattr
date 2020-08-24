@@ -38,7 +38,7 @@ sine wave (non-dimensional):
 use 0 for no dampening,
 use 1 for linear dampening.}
 
-\item{n_color_interp}{\code{numeric}   number interpolated colors on canvas.}
+\item{n_color_interp}{\code{numeric}   number of colors interpolated on canvas.}
 
 \item{elementId}{\code{character} ID for enclosing element.}
 }

@@ -62,11 +62,7 @@ hcl_list <- function(colors) {
   trgb_num <- t(rgb_num) / 255
   rgb <- colorspace::sRGB(trgb_num)
 
-  print(rgb)
-
   hcl <- methods::as(rgb, "polarLUV")
-
-  print(hcl)
 
   access <- function(x) {
     unname(hcl@coords[, x])

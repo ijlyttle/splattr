@@ -133,7 +133,7 @@ hcl_df_table <- function(df, background = NULL, title = NULL, decimals = 1) {
     ) %>%
     gt::tab_style(
       style = gt::cell_text(
-        transform = "uppercase",
+        transform = "lowercase",
         font = c("Courier New"),
         weight = "bold"
       ),

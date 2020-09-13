@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">splattr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9007</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9008</span>
       </span>
     </div>
 
@@ -70,7 +70,7 @@
 
       
 
-      </header><script src="splattr_files/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="splattr_files/htmlwidgets-1.5.1/htmlwidgets.js"></script><script src="splattr_files/splattr_swatch-0.0.3/swatch-lib.js"></script><script src="splattr_files/splattr_swatch-binding-0.0.0.9007/splattr_swatch.js"></script><script src="splattr_files/splattr_ramp-0.0.2/ramp-lib.js"></script><script src="splattr_files/splattr_ramp-binding-0.0.0.9007/splattr_ramp.js"></script><script src="splattr_files/d3v5-5.0.0/d3.min.js"></script><div class="row">
+      </header><script src="splattr_files/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="splattr_files/htmlwidgets-1.5.1/htmlwidgets.js"></script><script src="splattr_files/splattr_swatch-0.0.3/swatch-lib.js"></script><script src="splattr_files/splattr_swatch-binding-0.0.0.9008/splattr_swatch.js"></script><script src="splattr_files/splattr_ramp-0.0.2/ramp-lib.js"></script><script src="splattr_files/splattr_ramp-binding-0.0.0.9008/splattr_ramp.js"></script><script src="splattr_files/d3v5-5.0.0/d3.min.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>splattr</h1>
@@ -83,30 +83,44 @@
 
     
     
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"splattr"</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st"><a href="https://github.com/ijlyttle/splattr">"splattr"</a></span>)
+</pre></div>
 <p>Some words.</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="no">colors</span> <span class="kw">&lt;-</span> <span class="kw pkg">colorspace</span><span class="kw ns">::</span><span class="fu"><a href="http://colorspace.R-Forge.R-project.org//reference/rainbow_hcl.html">terrain_hcl</a></span>(<span class="fl">10</span>)
-<span class="no">colors</span>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="kw">colors</span> <span class="op">&lt;-</span> <span class="kw">colorspace</span>::<span class="fu"><a href="http://colorspace.R-Forge.R-project.org//reference/rainbow_hcl.html">terrain_hcl</a></span>(<span class="fl">10</span>)
+<span class="kw">colors</span>
 <span class="co">#&gt;  [1] "#26A63A" "#68AC20" "#92B106" "#B4B61A" "#D3BA3D" "#EFBD60" "#FFC183"</span>
-<span class="co">#&gt;  [8] "#FFC6A7" "#FFCDC9" "#F1F1F1"</span></pre></body></html></div>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/swatch.html">swatch</a></span>(<span class="no">colors</span>, <span class="kw">background</span> <span class="kw">=</span> <span class="st">"#333"</span>, <span class="kw">margin</span> <span class="kw">=</span> <span class="fl">10</span>)</pre></body></html></div>
-<div id="htmlwidget-4c736d8e8a2b3fe1bedc" style="width:700px;height:432.632880098888px;" class="splattr_swatch html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4c736d8e8a2b3fe1bedc">{"x":{"colors":["#26A63A","#68AC20","#92B106","#B4B61A","#D3BA3D","#EFBD60","#FFC183","#FFC6A7","#FFCDC9","#F1F1F1"],"height":40,"dx":10,"margin":10,"background":"#333"},"evals":[],"jsHooks":[]}</script><p>Some more words.</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/swatch.html">swatch</a></span>(<span class="no">colors</span>, <span class="kw">height</span> <span class="kw">=</span> <span class="fl">50</span>)</pre></body></html></div>
-<div id="htmlwidget-52b4dbf13b72fdf0289e" style="width:700px;height:432.632880098888px;" class="splattr_swatch html-widget"></div>
-<script type="application/json" data-for="htmlwidget-52b4dbf13b72fdf0289e">{"x":{"colors":["#26A63A","#68AC20","#92B106","#B4B61A","#D3BA3D","#EFBD60","#FFC183","#FFC6A7","#FFCDC9","#F1F1F1"],"height":50,"dx":10,"margin":0,"background":null},"evals":[],"jsHooks":[]}</script><p>Even more words.</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="../reference/ramp.html">ramp</a></span>(<span class="no">colors</span>)</pre></body></html></div>
-<div id="htmlwidget-db84a1acd7a99de327cd" style="width:700px;height:432.632880098888px;" class="splattr_ramp html-widget"></div>
-<script type="application/json" data-for="htmlwidget-db84a1acd7a99de327cd">{"x":{"colors":["#26A63A","#68AC20","#92B106","#B4B61A","#D3BA3D","#EFBD60","#FFC183","#FFC6A7","#FFCDC9","#F1F1F1"],"n":512,"height":40,"margin":0,"background":null},"evals":[],"jsHooks":[]}</script><p>We can estimate the effect of a color-vision deficiency:</p>
-<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="../reference/ramp.html">ramp</a></span>(<span class="kw pkg">colorspace</span><span class="kw ns">::</span><span class="fu"><a href="http://colorspace.R-Forge.R-project.org//reference/simulate_cvd.html">deutan</a></span>(<span class="no">colors</span>))</pre></body></html></div>
-<div id="htmlwidget-be089f3bc7563f3170b3" style="width:700px;height:432.632880098888px;" class="splattr_ramp html-widget"></div>
-<script type="application/json" data-for="htmlwidget-be089f3bc7563f3170b3">{"x":{"colors":["#8F7D3E","#B29225","#CCA00B","#D8AE1E","#DFBB40","#E4C662","#E5CF84","#E2D4A7","#E0DAC8","#F1F0F1"],"n":512,"height":40,"margin":0,"background":null},"evals":[],"jsHooks":[]}</script><p>Some final words.</p>
-<div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="fu"><a href="../reference/hcl_dataframe.html">hcl_table</a></span>(<span class="no">colors</span>)</pre></body></html></div>
+<span class="co">#&gt;  [8] "#FFC6A7" "#FFCDC9" "#F1F1F1"</span>
+</pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="../reference/swatch.html">swatch</a></span>(<span class="kw">colors</span>, background = <span class="st">"#333"</span>, margin = <span class="fl">10</span>)
+</pre></div>
+<div id="htmlwidget-150a7de626649cc5afd2" style="width:700px;height:432.632880098888px;" class="splattr_swatch html-widget"></div>
+<script type="application/json" data-for="htmlwidget-150a7de626649cc5afd2">{"x":{"colors":["#26A63A","#68AC20","#92B106","#B4B61A","#D3BA3D","#EFBD60","#FFC183","#FFC6A7","#FFCDC9","#F1F1F1"],"height":40,"dx":10,"margin":10,"background":"#333"},"evals":[],"jsHooks":[]}</script><p>Some more words.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="../reference/swatch.html">swatch</a></span>(<span class="kw">colors</span>, height = <span class="fl">50</span>)
+</pre></div>
+<div id="htmlwidget-63abaf816137d338909b" style="width:700px;height:432.632880098888px;" class="splattr_swatch html-widget"></div>
+<script type="application/json" data-for="htmlwidget-63abaf816137d338909b">{"x":{"colors":["#26A63A","#68AC20","#92B106","#B4B61A","#D3BA3D","#EFBD60","#FFC183","#FFC6A7","#FFCDC9","#F1F1F1"],"height":50,"dx":10,"margin":0,"background":null},"evals":[],"jsHooks":[]}</script><p>Even more words.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="fu"><a href="../reference/ramp.html">ramp</a></span>(<span class="kw">colors</span>)
+</pre></div>
+<div id="htmlwidget-d4cb89562eb7d2e615c8" style="width:700px;height:432.632880098888px;" class="splattr_ramp html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d4cb89562eb7d2e615c8">{"x":{"colors":["#26A63A","#68AC20","#92B106","#B4B61A","#D3BA3D","#EFBD60","#FFC183","#FFC6A7","#FFCDC9","#F1F1F1"],"n":512,"height":40,"margin":0,"background":null},"evals":[],"jsHooks":[]}</script><p>We can estimate the effect of a color-vision deficiency:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit">
+<span class="fu"><a href="../reference/ramp.html">ramp</a></span>(<span class="kw">colorspace</span>::<span class="fu"><a href="http://colorspace.R-Forge.R-project.org//reference/simulate_cvd.html">deutan</a></span>(<span class="kw">colors</span>))
+</pre></div>
+<div id="htmlwidget-58c618aa6040d403d3a0" style="width:700px;height:432.632880098888px;" class="splattr_ramp html-widget"></div>
+<script type="application/json" data-for="htmlwidget-58c618aa6040d403d3a0">{"x":{"colors":["#8F7D3E","#B29225","#CCA00B","#D8AE1E","#DFBB40","#E4C662","#E5CF84","#E2D4A7","#E0DAC8","#F1F0F1"],"n":512,"height":40,"margin":0,"background":null},"evals":[],"jsHooks":[]}</script><p>Some final words.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit">
+<span class="fu"><a href="../reference/hcl_dataframe.html">hcl_table</a></span>(<span class="kw">colors</span>)
+</pre></div>
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#lfezhwplzm .gt_table {
+#vqmbcyusam .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -131,7 +145,7 @@
   border-left-color: #D3D3D3;
 }
 
-#lfezhwplzm .gt_heading {
+#vqmbcyusam .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -143,7 +157,7 @@
   border-right-color: #D3D3D3;
 }
 
-#lfezhwplzm .gt_title {
+#vqmbcyusam .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -153,7 +167,7 @@
   border-bottom-width: 0;
 }
 
-#lfezhwplzm .gt_subtitle {
+#vqmbcyusam .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -163,13 +177,13 @@
   border-top-width: 0;
 }
 
-#lfezhwplzm .gt_bottom_border {
+#vqmbcyusam .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lfezhwplzm .gt_col_headings {
+#vqmbcyusam .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -184,7 +198,7 @@
   border-right-color: #D3D3D3;
 }
 
-#lfezhwplzm .gt_col_heading {
+#vqmbcyusam .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -204,7 +218,7 @@
   overflow-x: hidden;
 }
 
-#lfezhwplzm .gt_column_spanner_outer {
+#vqmbcyusam .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -216,15 +230,15 @@
   padding-right: 4px;
 }
 
-#lfezhwplzm .gt_column_spanner_outer:first-child {
+#vqmbcyusam .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lfezhwplzm .gt_column_spanner_outer:last-child {
+#vqmbcyusam .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lfezhwplzm .gt_column_spanner {
+#vqmbcyusam .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -236,7 +250,7 @@
   width: 100%;
 }
 
-#lfezhwplzm .gt_group_heading {
+#vqmbcyusam .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -258,7 +272,7 @@
   vertical-align: middle;
 }
 
-#lfezhwplzm .gt_empty_group_heading {
+#vqmbcyusam .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -273,15 +287,15 @@
   vertical-align: middle;
 }
 
-#lfezhwplzm .gt_from_md > :first-child {
+#vqmbcyusam .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lfezhwplzm .gt_from_md > :last-child {
+#vqmbcyusam .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lfezhwplzm .gt_row {
+#vqmbcyusam .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -300,7 +314,7 @@
   overflow-x: hidden;
 }
 
-#lfezhwplzm .gt_stub {
+#vqmbcyusam .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -312,7 +326,7 @@
   padding-left: 12px;
 }
 
-#lfezhwplzm .gt_summary_row {
+#vqmbcyusam .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -322,7 +336,7 @@
   padding-right: 5px;
 }
 
-#lfezhwplzm .gt_first_summary_row {
+#vqmbcyusam .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -332,7 +346,7 @@
   border-top-color: #D3D3D3;
 }
 
-#lfezhwplzm .gt_grand_summary_row {
+#vqmbcyusam .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -342,7 +356,7 @@
   padding-right: 5px;
 }
 
-#lfezhwplzm .gt_first_grand_summary_row {
+#vqmbcyusam .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -352,11 +366,11 @@
   border-top-color: #D3D3D3;
 }
 
-#lfezhwplzm .gt_striped {
+#vqmbcyusam .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lfezhwplzm .gt_table_body {
+#vqmbcyusam .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -365,7 +379,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#lfezhwplzm .gt_footnotes {
+#vqmbcyusam .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -379,13 +393,13 @@
   border-right-color: #D3D3D3;
 }
 
-#lfezhwplzm .gt_footnote {
+#vqmbcyusam .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#lfezhwplzm .gt_sourcenotes {
+#vqmbcyusam .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -399,46 +413,46 @@
   border-right-color: #D3D3D3;
 }
 
-#lfezhwplzm .gt_sourcenote {
+#vqmbcyusam .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#lfezhwplzm .gt_left {
+#vqmbcyusam .gt_left {
   text-align: left;
 }
 
-#lfezhwplzm .gt_center {
+#vqmbcyusam .gt_center {
   text-align: center;
 }
 
-#lfezhwplzm .gt_right {
+#vqmbcyusam .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lfezhwplzm .gt_font_normal {
+#vqmbcyusam .gt_font_normal {
   font-weight: normal;
 }
 
-#lfezhwplzm .gt_font_bold {
+#vqmbcyusam .gt_font_bold {
   font-weight: bold;
 }
 
-#lfezhwplzm .gt_font_italic {
+#vqmbcyusam .gt_font_italic {
   font-style: italic;
 }
 
-#lfezhwplzm .gt_super {
+#vqmbcyusam .gt_super {
   font-size: 65%;
 }
 
-#lfezhwplzm .gt_footnote_marks {
+#vqmbcyusam .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="lfezhwplzm" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="table gt_table">
+<div id="vqmbcyusam" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="table gt_table">
 <thead class="gt_col_headings"><tr>
 <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">color</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">hue</th>
@@ -447,64 +461,64 @@
     </tr></thead>
 <tbody class="gt_table_body">
 <tr>
-<td class="gt_row gt_right" style="background-color: #26A63A; color: #FFFFFF;">#26A63A</td>
-      <td class="gt_row gt_right">130</td>
-      <td class="gt_row gt_right">80</td>
-      <td class="gt_row gt_right">60</td>
+<td class="gt_row gt_right" style="background-color: #26A63A; color: #FFFFFF; font-family: 'Courier New'; font-weight: bold; text-transform: lowercase;">#26A63A</td>
+      <td class="gt_row gt_right">130.1</td>
+      <td class="gt_row gt_right">79.7</td>
+      <td class="gt_row gt_right">59.9</td>
     </tr>
 <tr>
-<td class="gt_row gt_right" style="background-color: #68AC20; color: #000000;">#68AC20</td>
-      <td class="gt_row gt_right">116</td>
-      <td class="gt_row gt_right">79</td>
-      <td class="gt_row gt_right">64</td>
+<td class="gt_row gt_right" style="background-color: #68AC20; color: #000000; font-family: 'Courier New'; font-weight: bold; text-transform: lowercase;">#68AC20</td>
+      <td class="gt_row gt_right">115.6</td>
+      <td class="gt_row gt_right">78.9</td>
+      <td class="gt_row gt_right">63.8</td>
     </tr>
 <tr>
-<td class="gt_row gt_right" style="background-color: #92B106; color: #000000;">#92B106</td>
-      <td class="gt_row gt_right">101</td>
-      <td class="gt_row gt_right">78</td>
-      <td class="gt_row gt_right">68</td>
+<td class="gt_row gt_right" style="background-color: #92B106; color: #000000; font-family: 'Courier New'; font-weight: bold; text-transform: lowercase;">#92B106</td>
+      <td class="gt_row gt_right">100.8</td>
+      <td class="gt_row gt_right">77.8</td>
+      <td class="gt_row gt_right">67.7</td>
     </tr>
 <tr>
-<td class="gt_row gt_right" style="background-color: #B4B61A; color: #000000;">#B4B61A</td>
-      <td class="gt_row gt_right">87</td>
-      <td class="gt_row gt_right">77</td>
-      <td class="gt_row gt_right">72</td>
+<td class="gt_row gt_right" style="background-color: #B4B61A; color: #000000; font-family: 'Courier New'; font-weight: bold; text-transform: lowercase;">#B4B61A</td>
+      <td class="gt_row gt_right">86.9</td>
+      <td class="gt_row gt_right">76.9</td>
+      <td class="gt_row gt_right">71.7</td>
     </tr>
 <tr>
-<td class="gt_row gt_right" style="background-color: #D3BA3D; color: #000000;">#D3BA3D</td>
-      <td class="gt_row gt_right">72</td>
-      <td class="gt_row gt_right">75</td>
-      <td class="gt_row gt_right">76</td>
+<td class="gt_row gt_right" style="background-color: #D3BA3D; color: #000000; font-family: 'Courier New'; font-weight: bold; text-transform: lowercase;">#D3BA3D</td>
+      <td class="gt_row gt_right">72.5</td>
+      <td class="gt_row gt_right">75.4</td>
+      <td class="gt_row gt_right">75.6</td>
     </tr>
 <tr>
-<td class="gt_row gt_right" style="background-color: #EFBD60; color: #000000;">#EFBD60</td>
-      <td class="gt_row gt_right">57</td>
-      <td class="gt_row gt_right">74</td>
-      <td class="gt_row gt_right">79</td>
+<td class="gt_row gt_right" style="background-color: #EFBD60; color: #000000; font-family: 'Courier New'; font-weight: bold; text-transform: lowercase;">#EFBD60</td>
+      <td class="gt_row gt_right">57.5</td>
+      <td class="gt_row gt_right">73.9</td>
+      <td class="gt_row gt_right">79.4</td>
     </tr>
 <tr>
-<td class="gt_row gt_right" style="background-color: #FFC183; color: #000000;">#FFC183</td>
-      <td class="gt_row gt_right">46</td>
-      <td class="gt_row gt_right">67</td>
-      <td class="gt_row gt_right">82</td>
+<td class="gt_row gt_right" style="background-color: #FFC183; color: #000000; font-family: 'Courier New'; font-weight: bold; text-transform: lowercase;">#FFC183</td>
+      <td class="gt_row gt_right">46.5</td>
+      <td class="gt_row gt_right">66.9</td>
+      <td class="gt_row gt_right">82.4</td>
     </tr>
 <tr>
-<td class="gt_row gt_right" style="background-color: #FFC6A7; color: #000000;">#FFC6A7</td>
-      <td class="gt_row gt_right">37</td>
-      <td class="gt_row gt_right">49</td>
-      <td class="gt_row gt_right">84</td>
+<td class="gt_row gt_right" style="background-color: #FFC6A7; color: #000000; font-family: 'Courier New'; font-weight: bold; text-transform: lowercase;">#FFC6A7</td>
+      <td class="gt_row gt_right">36.9</td>
+      <td class="gt_row gt_right">49.0</td>
+      <td class="gt_row gt_right">84.2</td>
     </tr>
 <tr>
-<td class="gt_row gt_right" style="background-color: #FFCDC9; color: #000000;">#FFCDC9</td>
-      <td class="gt_row gt_right">17</td>
-      <td class="gt_row gt_right">33</td>
-      <td class="gt_row gt_right">87</td>
+<td class="gt_row gt_right" style="background-color: #FFCDC9; color: #000000; font-family: 'Courier New'; font-weight: bold; text-transform: lowercase;">#FFCDC9</td>
+      <td class="gt_row gt_right">17.1</td>
+      <td class="gt_row gt_right">32.8</td>
+      <td class="gt_row gt_right">86.6</td>
     </tr>
 <tr>
-<td class="gt_row gt_right" style="background-color: #F1F1F1; color: #000000;">#F1F1F1</td>
-      <td class="gt_row gt_right">94</td>
-      <td class="gt_row gt_right">0</td>
-      <td class="gt_row gt_right">95</td>
+<td class="gt_row gt_right" style="background-color: #F1F1F1; color: #000000; font-family: 'Courier New'; font-weight: bold; text-transform: lowercase;">#F1F1F1</td>
+      <td class="gt_row gt_right">94.1</td>
+      <td class="gt_row gt_right">0.0</td>
+      <td class="gt_row gt_right">95.1</td>
     </tr>
 </tbody>
 </table></div>
@@ -523,7 +537,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

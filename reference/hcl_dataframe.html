@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="HCL data — hcl_dataframe" />
-<meta property="og:description" content="These function help you consider colors in terms of their hue, chroma, and
+<meta property="og:description" content="These functions help you consider colors in terms of their hue, chroma, and
 luminance (HCL). You will need the colorspace
 package to run these functions." />
 
@@ -74,7 +74,7 @@ package to run these functions." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">splattr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9007</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9008</span>
       </span>
     </div>
 
@@ -122,14 +122,14 @@ package to run these functions." />
     </div>
 
     <div class="ref-description">
-    <p>These function help you consider colors in terms of their hue, chroma, and
+    <p>These functions help you consider colors in terms of their hue, chroma, and
 luminance (HCL). You will need the <a href='http://hclwizard.org/r-colorspace/'>colorspace</a>
 package to run these functions.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>hcl_dataframe</span>(<span class='no'>colors</span>)
+    <pre class="usage"><span class='fu'>hcl_dataframe</span>(<span class='kw'>colors</span>, background = <span class='kw'>NULL</span>)
 
-<span class='fu'>hcl_table</span>(<span class='no'>colors</span>, <span class='kw'>title</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>decimals</span> <span class='kw'>=</span> <span class='fl'>0</span>)</pre>
+<span class='fu'>hcl_table</span>(<span class='kw'>colors</span>, background = <span class='kw'>NULL</span>, title = <span class='kw'>NULL</span>, decimals = <span class='fl'>1</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -138,6 +138,11 @@ package to run these functions.</p>
       <th>colors</th>
       <td><p><code>character</code> vector of R colors. Can be hex codes, etc.
 Names can be meaningful.</p></td>
+    </tr>
+    <tr>
+      <th>background</th>
+      <td><p><code>character</code> R color to use as background; used for
+prominence calculation.</p></td>
     </tr>
     <tr>
       <th>title</th>
@@ -152,17 +157,18 @@ Names can be meaningful.</p></td>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     
-<dl'>
+<dl>
 <dt><code>hcl_dataframe()</code></dt><dd><p><code>data.frame</code> with columns:
-<code>name</code>, <code>color</code>, <code>hue</code>, <code>chroma</code> <code>luminance</code>.</p></dd>
+<code>name</code>, <code>color</code>, <code>hue</code>, <code>chroma</code> <code>luminance</code>, <code>prominence</code>.</p></dd>
 <dt><code>hcl_table()</code></dt><dd><p>An object with S3 class <code>gt_tbl</code>.</p></dd>
 
 </dl>
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    
-<ul>
+    <p>If you provide a <code>background</code> color, the <em>prominence</em> of each color from the
+background, i.e. the perceptual distance from the background, is calculated.
+Furthermore, <code>hcl_table()</code> sets the background color accordingly.</p><ul>
 <li><p><code>hcl_dataframe()</code>: get a data frame with HCL data</p></li>
 <li><p><code>hcl_table()</code>: get a formatted <a href='https://gt.rstudio.com/index.html'>gt table</a>;
 you will need the gt package.</p></li>
@@ -171,13 +177,17 @@ you will need the gt package.</p></li>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>  <span class='co'># return data</span>
-  <span class='fu'>hcl_dataframe</span>(<span class='st'>"red"</span>)</div><div class='output co'>#&gt;   name color      hue   chroma luminance
-#&gt; 1 &lt;NA&gt;   red 12.17395 179.0408  53.24059</div><div class='input'>  <span class='fu'>hcl_dataframe</span>(<span class='st'>"#FF0000"</span>)</div><div class='output co'>#&gt;   name   color      hue   chroma luminance
-#&gt; 1 &lt;NA&gt; #FF0000 12.17395 179.0408  53.24059</div><div class='input'>  <span class='fu'>hcl_dataframe</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"red"</span>, <span class='st'>"green"</span>))</div><div class='output co'>#&gt;   name color       hue   chroma luminance
+  <span class='fu'>hcl_dataframe</span>(<span class='st'>"red"</span>)
+</div><div class='output co'>#&gt;   name color      hue   chroma luminance
+#&gt; 1 &lt;NA&gt;   red 12.17395 179.0408  53.24059</div><div class='input'>  <span class='fu'>hcl_dataframe</span>(<span class='st'>"#FF0000"</span>)
+</div><div class='output co'>#&gt;   name   color      hue   chroma luminance
+#&gt; 1 &lt;NA&gt; #FF0000 12.17395 179.0408  53.24059</div><div class='input'>  <span class='fu'>hcl_dataframe</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"red"</span>, <span class='st'>"green"</span>))
+</div><div class='output co'>#&gt;   name color       hue   chroma luminance
 #&gt; 1 &lt;NA&gt;   red  12.17395 179.0408  53.24059
 #&gt; 2 &lt;NA&gt; green 127.72353 135.7811  87.73510</div><div class='input'>
   <span class='co'># return formatted table</span>
-  <span class='fu'>hcl_table</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"red"</span>, <span class='st'>"green"</span>))</div><div class='output co'>#&gt; &lt;style&gt;html {
+  <span class='fu'>hcl_table</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"red"</span>, <span class='st'>"green"</span>))
+</div><div class='output co'>#&gt; &lt;style&gt;html {
 #&gt;   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 #&gt; }
 #&gt; 
@@ -525,16 +535,16 @@ you will need the gt package.</p></li>
 #&gt;   &lt;/thead&gt;
 #&gt;   &lt;tbody class="gt_table_body"&gt;
 #&gt;     &lt;tr&gt;
-#&gt;       &lt;td class="gt_row gt_right" style="background-color: #FF0000; color: #FFFFFF;"&gt;red&lt;/td&gt;
-#&gt;       &lt;td class="gt_row gt_right"&gt;12&lt;/td&gt;
-#&gt;       &lt;td class="gt_row gt_right"&gt;179&lt;/td&gt;
-#&gt;       &lt;td class="gt_row gt_right"&gt;53&lt;/td&gt;
+#&gt;       &lt;td class="gt_row gt_right" style="background-color: #FF0000; color: #FFFFFF; font-family: &amp;#39;Courier New&amp;#39;; font-weight: bold; text-transform: lowercase;"&gt;red&lt;/td&gt;
+#&gt;       &lt;td class="gt_row gt_right"&gt;12.2&lt;/td&gt;
+#&gt;       &lt;td class="gt_row gt_right"&gt;179.0&lt;/td&gt;
+#&gt;       &lt;td class="gt_row gt_right"&gt;53.2&lt;/td&gt;
 #&gt;     &lt;/tr&gt;
 #&gt;     &lt;tr&gt;
-#&gt;       &lt;td class="gt_row gt_right" style="background-color: #00FF00; color: #000000;"&gt;green&lt;/td&gt;
-#&gt;       &lt;td class="gt_row gt_right"&gt;128&lt;/td&gt;
-#&gt;       &lt;td class="gt_row gt_right"&gt;136&lt;/td&gt;
-#&gt;       &lt;td class="gt_row gt_right"&gt;88&lt;/td&gt;
+#&gt;       &lt;td class="gt_row gt_right" style="background-color: #00FF00; color: #000000; font-family: &amp;#39;Courier New&amp;#39;; font-weight: bold; text-transform: lowercase;"&gt;green&lt;/td&gt;
+#&gt;       &lt;td class="gt_row gt_right"&gt;127.7&lt;/td&gt;
+#&gt;       &lt;td class="gt_row gt_right"&gt;135.8&lt;/td&gt;
+#&gt;       &lt;td class="gt_row gt_right"&gt;87.7&lt;/td&gt;
 #&gt;     &lt;/tr&gt;
 #&gt;   &lt;/tbody&gt;
 #&gt;   
@@ -556,7 +566,7 @@ you will need the gt package.</p></li>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

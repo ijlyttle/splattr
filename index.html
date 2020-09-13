@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">splattr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9007</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9008</span>
       </span>
     </div>
 
@@ -82,21 +82,25 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the development version of splattr from <a href="https://github.com/ijlyttle/splattr">GitHub</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="co"># install.packages("devtools")</span>
-<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu">install_github</span>(<span class="st">"ijlyttle/splattr"</span>)</pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="co"># install.packages("devtools")</span>
+<span class="kw">devtools</span>::<span class="fu">install_github</span>(<span class="st">"ijlyttle/splattr"</span>)
+</pre></div>
 </div>
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
 <p>These examples are not run in the README because I am not able to get <code><a href="reference/swatch.html">swatch()</a></code> and <code><a href="reference/ramp.html">ramp()</a></code> to print outside of an HTML context.</p>
 <p>You can see them in action in the <a href="https://ijlyttle.github.io/splattr/articles/splattr.html">get-started article</a>.</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"splattr"</span>)
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st"><a href="https://github.com/ijlyttle/splattr">"splattr"</a></span>)
 
-<span class="no">colors</span> <span class="kw">&lt;-</span> <span class="kw pkg">colorspace</span><span class="kw ns">::</span><span class="fu"><a href="http://colorspace.R-Forge.R-project.org//reference/rainbow_hcl.html">terrain_hcl</a></span>(<span class="fl">10</span>)
+<span class="kw">colors</span> <span class="op">&lt;-</span> <span class="kw">colorspace</span>::<span class="fu"><a href="http://colorspace.R-Forge.R-project.org//reference/rainbow_hcl.html">terrain_hcl</a></span>(<span class="fl">10</span>)
 
-<span class="fu"><a href="reference/swatch.html">swatch</a></span>(<span class="no">colors</span>)
+<span class="fu"><a href="reference/swatch.html">swatch</a></span>(<span class="kw">colors</span>)
 
-<span class="fu"><a href="reference/ramp.html">ramp</a></span>(<span class="no">colors</span>)</pre></div>
+<span class="fu"><a href="reference/ramp.html">ramp</a></span>(<span class="kw">colors</span>)
+</pre></div>
 </div>
 <div id="contributing" class="section level2">
 <h2 class="hasAnchor">
@@ -154,7 +158,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

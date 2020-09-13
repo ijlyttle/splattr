@@ -117,14 +117,17 @@ hcl_df_table <- function(df, background = NULL, title = NULL, decimals = 1) {
   is_numeric <- purrr::map_lgl(df, is.numeric)
   vars_numeric <- names(df)[is_numeric]
 
+  is_character <- purrr::map_lgl(df, is.character)
+  vars_character <- names(df)[is_character]
+
   df %>%
     gt::gt() %>%
     gt::cols_align(
       align = "right",
-      columns = gt::vars("color")
+      columns = vars_character
     ) %>%
     gt::data_color(
-      columns = gt::vars("color"),
+      columns = "color",
       colors = identity
     ) %>%
     gt::fmt_number(

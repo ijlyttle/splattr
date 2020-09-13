@@ -5,13 +5,16 @@
 \alias{hcl_table}
 \title{HCL data}
 \usage{
-hcl_dataframe(colors)
+hcl_dataframe(colors, background = NULL)
 
-hcl_table(colors, title = NULL, decimals = 0)
+hcl_table(colors, background = NULL, title = NULL, decimals = 1)
 }
 \arguments{
 \item{colors}{\code{character} vector of R colors. Can be hex codes, etc.
 Names can be meaningful.}
+
+\item{background}{\code{character} R color to use as background; used for
+prominence calculation.}
 
 \item{title}{\code{character} title for table.}
 
@@ -20,16 +23,19 @@ Names can be meaningful.}
 \value{
 \describe{
 \item{\code{hcl_dataframe()}}{\code{data.frame} with columns:
-\code{name}, \code{color}, \code{hue}, \code{chroma} \code{luminance}.}
+\code{name}, \code{color}, \code{hue}, \code{chroma} \code{luminance}, \code{prominence}.}
 \item{\code{hcl_table()}}{An object with S3 class \code{gt_tbl}.}
 }
 }
 \description{
-These function help you consider colors in terms of their hue, chroma, and
+These functions help you consider colors in terms of their hue, chroma, and
 luminance (HCL). You will need the {\href{http://hclwizard.org/r-colorspace/}{colorspace}}
 package to run these functions.
 }
 \details{
+If you provide a \code{background} color, the \emph{prominence} of each color from the
+background, i.e. the perceptual distance from the background, is calculated.
+Furthermore, \code{hcl_table()} sets the background color accordingly.
 \itemize{
 \item \code{hcl_dataframe()}: get a data frame with HCL data
 \item \code{hcl_table()}: get a formatted \href{https://gt.rstudio.com/index.html}{gt table};
